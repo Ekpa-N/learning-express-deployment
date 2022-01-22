@@ -11,6 +11,8 @@ const testObject = [
         name: "test"
     }
 ]
+
+server.use(express.static(__dirname + '/client/build'))
 server.use(express.json())
 server.use(cors())
 
