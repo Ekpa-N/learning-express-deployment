@@ -17,7 +17,7 @@ server.use(express.json())
 server.use(cors())
 
 server.get('/', (request, response) => {
-    response.json(testObject)
+    response.sendFile(__dirname + '/client/build/index.html')
 })
 
 server.listen(port, ()=>{
